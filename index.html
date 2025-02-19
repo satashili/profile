@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Ni - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Ethan Ni</h1>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="nav-controls">
+            <button class="lang-switch" onclick="toggleLanguage()">
+                <span data-lang="en">中文</span>
+                <span class="lang-divider">/</span>
+                <span data-lang="zh">English</span>
+            </button>
+            
+            <button class="theme-toggle" onclick="toggleTheme()">
+                🌓
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="content" data-lang="en">
+            <section id="about">
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img src="./avatar.png" alt="Profile" class="profile-image" width="200" height="200">
+                    </div>
+                    
+                    <div class="profile-content">
+                        <h1 class="profile-name">Ethan Ni</h1>
+                        <p class="profile-title">Full-stack Developer | AI & Blockchain Enthusiast</p>
+                        
+                        <div class="profile-items">
+                            <div class="profile-item">
+                                <span class="item-icon">💻</span>
+                                <span class="item-text">Full-stack Developer specializing in AI and Blockchain</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🚀</span>
+                                <span class="item-text">Building intelligent applications for real-world solutions</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🔧</span>
+                                <span class="item-text">Tech Stack: React, TypeScript, Node.js, Solana</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🌟</span>
+                                <span class="item-text">Passionate about innovative tech solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>🚀 Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <h3>Cryptocurrency Multi-Period Analysis System</h3>
+                        <img src="images/multi-period.png" alt="Crypto Analysis System" class="project-image">
+                        <p>A cryptocurrency analysis platform powered by AI, providing intelligent trading insights and multi-period technical analysis.</p>
+                        <h4 class="tech-stack-title">Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Material-UI</span>
+                            <span>OpenAI API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://solanago.top" target="_blank">Click to View Demo</a>
+                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">Click to view Source Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <h3>Smart Contract Review Assistant</h3>
+                        <img src="./images/features.png" alt="Contract Review" class="project-image">
+                        <p>An AI-powered contract analysis tool offering multi-perspective review capabilities for legal documents.</p>
+                        <h4 class="tech-stack-title">Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>DeepSeek API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/satashili/ailaw1" target="_blank">Click to View Source Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Panda Selfielight 项目 -->
+                    <div class="project-card">
+                        <h3>Panda Selfielight</h3>
+                        <img src="./images/panda-selfie.png" alt="Panda Selfielight App" class="project-image">
+                        <p>A practical Android application for enhanced selfie lighting, featuring light adjustment and professional photo capabilities.</p>
+                        <h4 class="tech-stack-title">Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>CameraX</span>
+                            <span>Material Design 3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/satashili/panda-selfie" target="_blank">Click to View Source Code</a>
+                        </div>
+                    </div>
+
+                    <!-- SHAREAI 项目 -->
+                    <div class="project-card">
+                        <h3>SHAREAI</h3>
+                        <img src="./images/shareai.png" alt="SHAREAI System" class="project-image">
+                        <p>An advanced knowledge-based QA system leveraging LLM technology with visual workflow orchestration.</p>
+                        <h4 class="tech-stack-title">Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>NextJs</span>
+                            <span>TypeScript</span>
+                            <span>ChakraUI</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shareai.ink" target="_blank">Click to View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>🛠 Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <p>React, TypeScript, Material-UI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <p>Node.js, Express, MongoDB, PostgreSQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI/ML</h3>
+                        <p>Deep Learning, XGBoost Model</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Blockchain</h3>
+                        <p>Solana, Smart Contracts</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Mobile</h3>
+                        <p>Android (Kotlin)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>📫 Contact</h2>
+                <div class="contact-info">
+                    <p>Email: jdpoe1047@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/satashili">github.com/satashili</a></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 中文内容 -->
+        <div class="content" data-lang="zh" style="display: none;">
+            <section id="about">
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img src="./avatar.png" alt="Profile" class="profile-image" width="200" height="200">
+                    </div>
+                    
+                    <div class="profile-content">
+                        <h1 class="profile-name">Ethan Ni</h1>
+                        <p class="profile-title">全栈开发者 | AI 与区块链技术爱好者</p>
+                        
+                        <div class="profile-items">
+                            <div class="profile-item">
+                                <span class="item-icon">💻</span>
+                                <span class="item-text">专注于 AI 和区块链技术的全栈开发者</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🚀</span>
+                                <span class="item-text">构建解决现实问题的智能应用</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🔧</span>
+                                <span class="item-text">技术栈：React、TypeScript、Node.js、Solana</span>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <span class="item-icon">🌟</span>
+                                <span class="item-text">致力于创新科技解决方案</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>🚀 精选项目</h2>
+                <div class="projects-grid">
+                    <!-- 项目 1 -->
+                    <div class="project-card">
+                        <h3>加密货币多周期分析系统</h3>
+                        <img src="images/multi-period.png" alt="加密货币分析系统" class="project-image">
+                        <p>AI驱动的加密货币分析平台，提供智能交易洞察和多周期技术分析。</p>
+                        <h4 class="tech-stack-title">技术栈</h4>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Material-UI</span>
+                            <span>OpenAI API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://solanago.top" target="_blank">点击查看演示</a>
+                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">点击查看源代码</a>
+                        </div>
+                    </div>
+
+                    <!-- 项目 2 -->
+                    <div class="project-card">
+                        <h3>智能合约审查助手</h3>
+                        <img src="./images/features.png" alt="合约审查" class="project-image">
+                        <p>一个AI驱动的合约分析工具，为法律文档提供多角度审查能力。</p>
+                        <h4 class="tech-stack-title">技术栈</h4>
+                        <div class="tech-stack">
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>DeepSeek API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/satashili/ailaw1" target="_blank">点击查看源代码</a>
+                        </div>
+                    </div>
+
+                    <!-- Panda Selfielight 项目 -->
+                    <div class="project-card">
+                        <h3>熊猫自拍补光</h3>
+                        <img src="./images/panda-selfie.png" alt="Panda Selfielight App" class="project-image">
+                        <p>一款实用的Android自拍补光应用，具有智能光线调节和专业拍照功能。</p>
+                        <h4 class="tech-stack-title">技术栈</h4>
+                        <div class="tech-stack">
+                            <span>Kotlin</span>
+                            <span>Jetpack Compose</span>
+                            <span>CameraX</span>
+                            <span>Material Design 3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/satashili/panda-selfie" target="_blank">点击查看源代码</a>
+                        </div>
+                    </div>
+
+                    <!-- SHAREAI 项目 -->
+                    <div class="project-card">
+                        <h3>SHAREAI</h3>
+                        <img src="./images/shareai.png" alt="SHAREAI System" class="project-image">
+                        <p>一个基于LLM的高级知识问答系统，具有可视化工作流程编排功能。</p>
+                        <h4 class="tech-stack-title">技术栈</h4>
+                        <div class="tech-stack">
+                            <span>NextJs</span>
+                            <span>TypeScript</span>
+                            <span>ChakraUI</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shareai.ink" target="_blank">点击查看演示</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>🛠 技术技能</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>前端</h3>
+                        <p>React、TypeScript、Material-UI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>后端</h3>
+                        <p>Node.js、Express、MongoDB、PostgreSQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI/ML</h3>
+                        <p>深度学习、XGBoost模型</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>区块链</h3>
+                        <p>Solana、智能合约</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>移动端</h3>
+                        <p>Android (Kotlin)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>📫 联系方式</h2>
+                <div class="contact-info">
+                    <p>邮箱：jdpoe1047@gmail.com</p>
+                    <p>GitHub：<a href="https://github.com/satashili">github.com/satashili</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // 语言切换功能
+        function toggleLanguage() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            document.documentElement.setAttribute('lang', newLang);
+            
+            document.querySelectorAll('.content').forEach(el => {
+                if (el.dataset.lang === newLang) {
+                    el.style.display = 'block';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+        }
+
+        // 主题切换功能
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+
+        // 移动端菜单
+        document.querySelector('.mobile-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html> 
