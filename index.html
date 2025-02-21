@@ -14,6 +14,11 @@
             <h1>Ethan Ni</h1>
         </div>
         
+        <!-- 添加移动端菜单按钮 -->
+        <button class="mobile-menu" aria-label="Toggle menu">
+            ☰
+        </button>
+        
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -88,8 +93,8 @@
                             <span>OpenAI API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://solanago.top" target="_blank">Click to View Demo</a>
-                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">Click to view Source Code</a>
+                            <a href="https://solanago.top" target="_blank">View Demo</a>
+                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">view Source Code</a>
                         </div>
                     </div>
 
@@ -106,7 +111,7 @@
                             <span>DeepSeek API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/satashili/ailaw1" target="_blank">Click to View Source Code</a>
+                            <a href="https://github.com/satashili/ailaw1" target="_blank">View Source Code</a>
                         </div>
                     </div>
 
@@ -123,7 +128,7 @@
                             <span>Material Design 3</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/satashili/panda-selfie" target="_blank">Click to View Source Code</a>
+                            <a href="https://github.com/satashili/panda-selfie" target="_blank">View Source Code</a>
                         </div>
                     </div>
 
@@ -140,7 +145,7 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://shareai.ink" target="_blank">Click to View Demo</a>
+                            <a href="https://shareai.ink" target="_blank">View Demo</a>
                         </div>
                     </div>
                 </div>
@@ -234,8 +239,8 @@
                             <span>OpenAI API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://solanago.top" target="_blank">点击查看演示</a>
-                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">点击查看源代码</a>
+                            <a href="https://solanago.top" target="_blank">查看演示</a>
+                            <a href="https://github.com/satashili/Cryptocurrency-Multi-Period-Analysis-System" target="_blank">查看源代码</a>
                         </div>
                     </div>
 
@@ -252,7 +257,7 @@
                             <span>DeepSeek API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/satashili/ailaw1" target="_blank">点击查看源代码</a>
+                            <a href="https://github.com/satashili/ailaw1" target="_blank">查看源代码</a>
                         </div>
                     </div>
 
@@ -269,7 +274,7 @@
                             <span>Material Design 3</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/satashili/panda-selfie" target="_blank">点击查看源代码</a>
+                            <a href="https://github.com/satashili/panda-selfie" target="_blank">查看源代码</a>
                         </div>
                     </div>
 
@@ -286,7 +291,7 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://shareai.ink" target="_blank">点击查看演示</a>
+                            <a href="https://shareai.ink" target="_blank">查看演示</a>
                         </div>
                     </div>
                 </div>
@@ -354,6 +359,20 @@
         // 移动端菜单
         document.querySelector('.mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        // 点击导航链接后自动关闭菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('show');
+            });
+        });
+
+        // 点击页面其他地方关闭菜单
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                document.querySelector('.nav-links').classList.remove('show');
+            }
         });
     </script>
 </body>

@@ -100,12 +100,27 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* 项目图片样式 */
 .project-image {
   width: 100%;
+  height: 200px;  /* 固定高度 */
+  object-fit: contain;  /* 改为 contain 而不是 cover */
+  background: var(--card-bg);  /* 添加背景色 */
   border-radius: 0.5rem;
   margin: 1rem 0;
-  object-fit: cover;
-  height: 200px; /* 统一图片高度 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .project-image {
+    height: 180px;  /* 移动端稍微降低高度 */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image {
+    height: 150px;  /* 更小屏幕进一步降低高度 */
+  }
 }
 
 /* 语言切换按钮 */
@@ -290,10 +305,9 @@ section {
 
 /* About section 样式 */
 .profile-container {
-    margin-top: 2rem;
     display: flex;
     gap: 2rem;
-    align-items: center;  /* 改为 center 实现垂直居中 */
+    align-items: center;
     padding: 2rem;
     background: var(--card-bg);
     border-radius: 1rem;
@@ -301,21 +315,14 @@ section {
 }
 
 .profile-image-wrapper {
-    flex-shrink: 0;
-    position: relative;
-    width: 200px;  /* 控制容器宽度 */
-    height: 200px; /* 控制容器高度 */
-    border-radius: 1rem;
-    overflow: hidden;
-    background: linear-gradient(135deg, #60a5fa, #3b82f6);
-    padding: 4px;
+    flex-shrink: 0;  /* 防止图片被压缩 */
 }
 
 .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;     /* 确保图片填充整个容器且不变形 */
-    border-radius: 0.8rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+    object-fit: cover;
 }
 
 .profile-content {
@@ -363,23 +370,85 @@ section {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
     .profile-image-wrapper {
-        width: 150px;  /* 移动端稍微缩小一点 */
+        width: 150px;  /* 移动端缩小头像 */
         height: 150px;
     }
-    
+
+    .profile-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profile-content {
+        text-align: center;
+        width: 100%;
+    }
+
     .profile-items {
         align-items: center;
     }
-    
-    .profile-item {
-        width: 100%;
+}
+
+/* 更小屏幕的适配 */
+@media (max-width: 480px) {
+    .profile-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .profile-title {
+        font-size: 1rem;
     }
 }
 
-/* 移除移动端菜单按钮 */
+/* 移动端菜单按钮样式 */
 .mobile-menu {
     display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-color);
+}
+
+/* 响应式导航栏 */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
 }
 
 /* 语言切换按钮和主题切换按钮容器 */
