@@ -495,3 +495,30 @@ html[lang="zh"] .content[data-lang="en"] {
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
+
+/* 新增项目高亮样式 */
+.project-card.featured {
+  border: 2px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.featured::before {
+  content: "NEW";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* 项目卡片动画效果增强 */
+.project-card.featured:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
